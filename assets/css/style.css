@@ -1,27 +1,25 @@
 .jumbotron{
 	text-align:center;
 	margin-top:40px;
-	background-color:#777;
+	background-image: url(../images/fruits.jpg);
 	height:600px;
-	padding-top:80px;
+	padding-top:40px;
 }
 
 h1{
-	background-color:black;
+	
 	width:500px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:60px;
+	margin-top:10px;
 	height:200px;
 	font-size:60px;
-	padding-top:20px;
 	border-radius:19px;
-	color:#ffffff;
+	color:black;
 
 }
 
 button{
-	background-color:#ffffff;
 	border-radius:9px;
 	width:300px;
 	font-size:30px;
@@ -29,6 +27,6 @@ button{
 }
 
 button:hover{
-	background-color:blue;
-	color:#ffffff;
+	background-color:green;
+	color:black;
 }
