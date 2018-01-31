@@ -1,8 +1,14 @@
 
+ 
 
 
 
 $(document).ready(function(){
+
+	$("#begin").on("click",function(){
+		showQuestion();
+		showOption();
+	})
 
 var counter = 0;
 var triviaQuestions = [
@@ -37,20 +43,21 @@ var incorrect=0;
 
 var timer= $("#timer");
 
- $(".begin").on("click",function(){
- 	console.log("bahaaaaaaaaaa")
- });
 
 
+function startQuiz(){
+	console.log("I started the quiz")
+}
 
 function startTimer(){
 	//begin work
+	console.log("I started")
 
 }
 
 function showQuestion(){
 	//begin the work
-	console.log("showQuestion was clicked")
+	
 	for(var i=0; i<triviaQuestions.length; i++){
 
 	
