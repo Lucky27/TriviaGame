@@ -1,13 +1,11 @@
 
  
-
-
-
 $(document).ready(function(){
 
 	$("#begin").on("click",function(){
 		showQuestion();
-		showOption();
+		 // showOption();
+		// startTimer();
 	})
 
 var counter = 0;
@@ -45,9 +43,9 @@ var timer= $("#timer");
 
 
 
-function startQuiz(){
-	console.log("I started the quiz")
-}
+// function startQuiz(){
+// 	console.log("I started the quiz")
+// }
 
 function startTimer(){
 	//begin work
@@ -55,39 +53,40 @@ function startTimer(){
 
 }
 
+
+
+var mySpecialvariable = 12
+
+
 function showQuestion(){
-	//begin the work
-	
+	//begin the work\	
+
 	for(var i=0; i<triviaQuestions.length; i++){
+		var quiz = $("<h2>");
+	 	quiz.addClass("question");
+	 	quiz.text(triviaQuestions[i].question);
+		$(".quiz").append(quiz);
+		
+		var optionsContainer = $("<div>");
+		optionsContainer.attr("id", "options"+i);
+		$(".quiz").append(optionsContainer)
+		
+		for(var j = 0; j<triviaQuestions[i].options.length;j++){
+			var btnGrp = $("<button>");
+		 	btnGrp.addClass("btn-group btn-"+i);
+		 	btnGrp.text(triviaQuestions[i].options[j]);
+		 	$("#options"+i).append(btnGrp);
+		}
 
 	
-	var quiz = $("<h2>");
-		quiz.addClass("question");
-		quiz.text(triviaQuestions[i].question);
-	$(".quiz").append(quiz);
-	var btnGrp = $("<div>");
-		btnGrp.addClass("btn-group");
-		btnGrp.attr("role", "group");
-		btnGrp.attr("id" + i);
-		btnGrp.attr("aria-label","first group");
-		$(".quiz").append(btnGrp);
-	}		
-}
 
-function showOption(){
-for (var j = 0; j <triviaQuestions[i].option.length; j++){
-	var btnOption = $("<button>");
-		btnOption.addClass("options btn btn-secondary");
-		btnOption.attr("type", "button");
-		btnOption.attr("name",i)
-		btnOption.attr("id","o"+j);
-		btnOption.attr("value", j);
-		btnOption.text(triviaQuestions[i].option[j]);
-	$(".options").append(btnOption);
-			};
-}
+	};
+};
 
-});
+
+
+
+ });
 
 
 
