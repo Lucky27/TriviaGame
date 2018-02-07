@@ -1,8 +1,8 @@
 .jumbotron{
 	text-align:center;
 	margin-top:40px;
-	background-image: url(../images/fruits.jpg);
-	height:600px;
+	background-color:red;
+	height:300px;
 	padding-top:40px;
 }
 
@@ -15,7 +15,7 @@ h1{
 	height:200px;
 	font-size:60px;
 	border-radius:19px;
-	color:black;
+	color:white;
 
 }
 
@@ -29,4 +29,14 @@ button{
 button:hover{
 	background-color:green;
 	color:black;
+}
+
+#correct{
+	font-size:25px;
+	text-align:center;
+}
+
+#incorrect{
+	font-size:25px;
+	text-align:center;
 }

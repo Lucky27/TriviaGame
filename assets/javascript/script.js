@@ -61,6 +61,7 @@ var mySpecialvariable = 12
 function showQuestion(){
 	//begin the work\	
 
+
 	for(var i=0; i<triviaQuestions.length; i++){
 		var quiz = $("<h2>");
 	 	quiz.addClass("question");
@@ -69,23 +70,41 @@ function showQuestion(){
 		
 		var optionsContainer = $("<div>");
 		optionsContainer.attr("id", "options"+i);
+		optionsContainer.addClass("container")
 		$(".quiz").append(optionsContainer)
 		
 		for(var j = 0; j<triviaQuestions[i].options.length;j++){
 			var btnGrp = $("<button>");
-		 	btnGrp.addClass("btn-group btn-"+i);
+		 	btnGrp.addClass("btn-group");
 		 	btnGrp.text(triviaQuestions[i].options[j]);
 		 	$("#options"+i).append(btnGrp);
 		}
 
-	
 
 	};
+
+	
 };
 
+$(".btn-group").on("click", function(){
 
+	console.log("you clicked")
+	
+	if((".btn-group") === triviaQuestions[i].answer){
+		correct === correct++;
+	}else{
+		incorrect === incorrect ++;
+	}
 
+	
 
+		
+});
+
+// $("#correct").innerhtml="correct"+correct;
+
+document.querySelector("#correct").innerHTML = "correct:"+ correct;
+document.querySelector("#incorrect").innerHTML = "incorrect:"+ incorrect;
  });
 
 
