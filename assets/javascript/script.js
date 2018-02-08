@@ -77,6 +77,8 @@ function showQuestion(){
 			var btnGrp = $("<button>");
 		 	btnGrp.addClass("btn-group");
 		 	btnGrp.text(triviaQuestions[i].options[j]);
+		 	btnGrp.attr("data-group", i);
+		 	btnGrp.attr("data-btn", j);
 		 	$("#options"+i).append(btnGrp);
 		}
 
@@ -86,14 +88,22 @@ function showQuestion(){
 	
 };
 
-$(".btn-group").on("click", function(){
+$(document).on("click", ".btn-group", function(){
 
 	console.log("you clicked")
+	// console.log(triviaQuestions[0].answer)
+	// console.log(triviaQuestions[1].answer)
+	// console.log(triviaQuestions[2].answer)
+	// console.log(triviaQuestions[3].answer)
+	// console.log($(this).val())
 	
-	if((".btn-group") === triviaQuestions[i].answer){
+	var currentQuestion = parseInt($(this).attr("data-group")); 
+	console.log(triviaQuestions[currentQuestion]);
+	if($(this).text() === triviaQuestions[currentQuestion].answer){
+		// console.log("right")
 		correct === correct++;
 	}else{
-		incorrect === incorrect ++;
+		console.log("wrong")
 	}
 
 	
@@ -101,9 +111,9 @@ $(".btn-group").on("click", function(){
 		
 });
 
-// $("#correct").innerhtml="correct"+correct;
+$("#correct").innerhtml="correct:" + correct;
 
-document.querySelector("#correct").innerHTML = "correct:"+ correct;
+// document.querySelector("#correct").innerHTML = "correct:"+ correct;
 document.querySelector("#incorrect").innerHTML = "incorrect:"+ incorrect;
  });
 
@@ -111,27 +121,6 @@ document.querySelector("#incorrect").innerHTML = "incorrect:"+ incorrect;
 
 
 
-
-// console.log(showOption)
-// console.log(showQuestion)
-
-// console.log(triviaQuestions)
- 
-// console.log(triviaQuestions[0].question);
-// console.log(triviaQuestions[0].options);
-// console.log(triviaQuestions[0].answer);
-
-// console.log(triviaQuestions[1].question);
-// console.log(triviaQuestions[1].options);
-// console.log(triviaQuestions[1].answer);
-
-// console.log(triviaQuestions[2].question);
-// console.log(triviaQuestions[2].options);
-// console.log(triviaQuestions[2].answer);
-
-// console.log(triviaQuestions[3].question);
-// console.log(triviaQuestions[3].options);
-// console.log(triviaQuestions[3].answer);
 
 
 
