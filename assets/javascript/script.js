@@ -90,14 +90,15 @@ $(document).on("click", ".btn-grp", function(){
 	// console.log("ding")
 
 var currentQuestion = parseInt($(this).attr("data-group")); 
-	console.log(triviaQuestions[currentQuestion]);
-	// if($(this).text() === triviaQuestions[currentQuestion].answer){
-	// 	// right.innerHTML = correct++;
-	// 	console.log("right")
-	// }
+	// console.log(triviaQuestions[currentQuestion]);
+	
+	if(".btn-grp", triviaQuestions[currentQuestion].answer ===triviaQuestions[currentQuestion].answer){
+		// right.innerHTML = right++;
+		// correct++
+		console.log(triviaQuestions[currentQuestion].answer);
+	}
 	// else{
-	// 	// wrong.innerHTML = "correct = 1";
-	// 	// console.log("wrong")
+	// 	wrong.innerHTML = wrong++
 	// }
 })
 
