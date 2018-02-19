@@ -93,13 +93,13 @@ var currentQuestion = parseInt($(this).attr("data-group"));
 	// console.log(triviaQuestions[currentQuestion]);
 	
 	if(".btn-grp", triviaQuestions[currentQuestion].answer ===triviaQuestions[currentQuestion].answer){
-		// right.innerHTML = right++;
+		right.innerHTML = ("Correct =" + right++);
 		// correct++
 		console.log(triviaQuestions[currentQuestion].answer);
 	}
-	// else{
-	// 	wrong.innerHTML = wrong++
-	// }
+	else if(!".btn-grp", triviaQuestions[currentQuestion].answer ===triviaQuestions[currentQuestion].answer){
+		wrong.innerHTML = ("Incorrect =" + incorrect++);
+	}
 })
 
 
